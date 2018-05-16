@@ -21,8 +21,9 @@ for (let i = 1;i < num;i++ ){
         pdf.addPage();
     for(let l = 0;l < total;l++ ){
         let textContent = getData[i][l];
-        pdf.font('fonts/方正报宋简体.ttf')
-            .text(textContent,left+space_left*l,top+l*50);
+        pdf
+            // .font('fonts/方正报宋简体.ttf')
+            .text(textContent,left*i+space_left*l,top+l*50);
         console.log(i+"  "+l);
     }
     console.log("____"+i);
